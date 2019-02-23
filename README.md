@@ -12,14 +12,14 @@ the solution contains two test project:
 ## Testing the project 
 - Run the **BannerFlow.Rest** project using VisualStudio
 - Import ``Banner.Rest.API.postman_Req_collection.json`` file in [Postman](https://www.getpostman.com/).
-It contains a collection of Http requests to interact with the REsT API 
+ > It contains a collection of Http requests to interact with the REsT API 
 
 
 ## API Specification:
 
 #### Authorization
 
-- Only requests with the headers containing `x-api-key`:`abcde1234` are accepted. 
+- Only requests with the headers containing **`x-api-key`**:`abcde1234` are accepted. 
   > (wanted to keep it simple as we have no concept of users and claims for the moment)
 
 ### Endpoints
