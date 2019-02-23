@@ -34,7 +34,7 @@ It contains a collection of Http requests to interact with the REsT API
 
    - ``POST`` **api/banner**    : get all banners.
 
-    ** Request Body: **
+     - **Request Body**
 
     <pre>
     {
@@ -47,9 +47,20 @@ It contains a collection of Http requests to interact with the REsT API
 
 - PUT resources:
 
-- ``PUT`` **api/banner/{banner_id}** :Updates a specific banner 
+ - ``PUT`` **api/banner/{banner_id}** :Updates a specific banner 
+
+     - **Request Body**
+
+    <pre>
+    {
+        <b> Id </b>: int, required
+        <b> Html </b>: string, should contain valid html code
+        <b> Created </b>: DatetTime, optional, default is the timestamp of the object creation
+        <b> Modified </b>: Datetime, optional, default is null
+    }
+    </pre>
 
 
 - DELETE resources:
 
-- ``GET`` **api/banner/{banner_id}** :deletes a specific banner
+- ``DELETE`` **api/banner/{banner_id}** :deletes a specific banner
