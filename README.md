@@ -35,16 +35,15 @@ It contains a collection of Http requests to interact with the REsT API
 - ``POST`` **api/banner**    : get all banners.
 
     ** Request Body:
-```
 
-  {
-    ** Id **: int, required
-    ** Html **: string, should contain valid html code
-    ** Created **: DatetTime, optional, default is the timestamp of the object creation
-    ** Modified **: Datetime, optional, default is null
+<pre>
+{
+    <b> Id </b>: int, required
+    <b> Html **: string, should contain valid html code
+    <b> Created </b>: DatetTime, optional, default is the timestamp of the object creation
+    <b> Modified </b>: Datetime, optional, default is null
   }
-
-```
+</pre>
 
 - PUT resources:
 
