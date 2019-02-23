@@ -1,0 +1,132 @@
+{
+	"variables": [],
+	"info": {
+		"name": "Banner.Rest.API",
+		"_postman_id": "629195cb-1c4e-065c-5445-dc926725e8d9",
+		"description": "",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "CreateBanner",
+			"request": {
+				"url": "https://localhost:44360/api/banner",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					},
+					{
+						"key": "x-api-key",
+						"value": "abcde1234",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\"Id\":1,\n\"Html\":\"<html><h1>Test</h1></html>\"\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "GetAllBanners",
+			"request": {
+				"url": "https://localhost:44360/api/banner",
+				"method": "GET",
+				"header": [
+					{
+						"key": "x-api-key",
+						"value": "abcde1234",
+						"description": ""
+					}
+				],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "GetBanner",
+			"request": {
+				"url": "https://localhost:44360/api/banner/2",
+				"method": "GET",
+				"header": [
+					{
+						"key": "x-api-key",
+						"value": "abcde1234",
+						"description": ""
+					}
+				],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "UpdateBanner",
+			"request": {
+				"url": "https://localhost:44360/api/banner/2",
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					},
+					{
+						"key": "x-api-key",
+						"value": "abcde1234",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\"Id\":2,\n\"Html\":\"<html><h1>Test22</h1></html>\"\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "DeleteBanner",
+			"request": {
+				"url": "https://localhost:44360/api/banner/3",
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "x-api-key",
+						"value": "abcde1234",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "GetBannerHtml",
+			"request": {
+				"url": "https://localhost:44360/api/banner/1/html",
+				"method": "GET",
+				"header": [
+					{
+						"key": "x-api-key",
+						"value": "abcde1234",
+						"description": ""
+					}
+				],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		}
+	]
+}
