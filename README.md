@@ -1,16 +1,18 @@
 # BannersRest.API
-A minimalistic REST API to manage Html Banners
+A minimalistic **REST API** to manage Html Banners on built on top **.Net Core** and **mongoDb** database.
 
 
-## Testing the project 
+## Solution overview 
 
 the solution contains two test project:
- - A __UnitTest__ project that tests the behaviour of the REsT ``Controller`` and the `HtmlUtility`
+ - the Main project **BannerFlow.Rest** 
+ - A __UnitTest__ project that tests the behaviour of the REsT ``Controller`` with a mock of the db service, and unit tests for  `HtmlUtility` which provides Html correctness checks.
  - An __IntegartionTest__ project which tests the end interaction with the database. 
-   * it uses A WebClient that make calls to different REST endpoints and check 
+   * it uses A WebClient that make calls to the different REST endpoints and check the whole flow.
  
- #### Alternatelively 
-- You can import the ``Banner.Rest.API.postman_Req_collection.json`` file in [Postman](https://www.getpostman.com/).
+## Testing the project 
+- Run the **BannerFlow.Rest** project using VisualStudio
+- Import ``Banner.Rest.API.postman_Req_collection.json`` file in [Postman](https://www.getpostman.com/).
 It contains a collection of Http requests to interact with the REsT API 
 
 
@@ -25,42 +27,42 @@ It contains a collection of Http requests to interact with the REsT API
 
 - GET resources:
 
-   - ``GET`` **api/banner**    : get all banners
-   - ``GET`` **api/banner/{banner_id}** :get specific banner 
-   - ``GET`` **api/banner/{banner_id}/html** : returns the html content of a specific banner 
+   - ``GET`` **api/banner**    :   &nbsp;&nbsp; get all banners
+   - ``GET`` **api/banner/{banner_id}** :  &nbsp;&nbsp;get specific banner 
+   - ``GET`` **api/banner/{banner_id}/html** :   &nbsp;&nbsp;returns the html content of a specific banner 
 
 
 - POST resources:
 
-   - ``POST`` **api/banner**    : get all banners.
+   - ``POST`` **api/banner**    :   &nbsp;&nbsp;get all banners.
 
      - **Request Body**
 
     <pre>
     {
-        <b> Id </b>: int, required
-        <b> Html </b>: string, should contain valid html code
-        <b> Created </b>: DatetTime, optional, default is the timestamp of the object creation
-        <b> Modified </b>: Datetime, optional, default is null
+        <b> Id </b>: &nbsp;&nbsp;int, required
+        <b> Html </b>: &nbsp;&nbsp;string, should contain valid html code
+        <b> Created </b>: &nbsp;&nbsp;DatetTime, optional, default is the timestamp of the object creation
+        <b> Modified </b>: &nbsp;&nbsp;Datetime, optional, default is null
     }
     </pre>
 
 - PUT resources:
 
-  - ``PUT`` **api/banner/{banner_id}** :Updates a specific banner 
+  - ``PUT`` **api/banner/{banner_id}** :   &nbsp;&nbsp;Updates a specific banner 
 
      - **Request Body**
 
     <pre>
     {
-        <b> Id </b>: int, required
-        <b> Html </b>: string, should contain valid html code
-        <b> Created </b>: DatetTime, optional, default is the timestamp of the object creation
-        <b> Modified </b>: Datetime, optional, default is null
+        <b> Id </b>: &nbsp;&nbsp;int, required
+        <b> Html </b>: &nbsp;&nbsp;string, should contain valid html code
+        <b> Created </b>: &nbsp;&nbsp;DatetTime, optional, default is the timestamp of the object creation
+        <b> Modified </b>: &nbsp;&nbsp;Datetime, optional, default is null
     }
     </pre>
 
 
 - DELETE resources:
 
-  - ``DELETE`` **api/banner/{banner_id}** :deletes a specific banner
+  - ``DELETE`` **api/banner/{banner_id}** :&nbsp;&nbsp;deletes a specific banner
