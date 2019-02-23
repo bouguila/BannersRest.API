@@ -6,7 +6,7 @@ A minimalistic **REST API** to manage Html Banners on built on top **.Net Core**
 
 the solution contains two test project:
  - the Main project **BannerFlow.Rest** 
- - A __UnitTest__ project that tests the behaviour of the REsT ``Controller`` with a mock of the db service, and unit tests for  `HtmlUtility` which provides Html correctness checks.
+ - A __UnitTest__ project that tests the behaviour of the REST ``Controller`` with a mock of the db service, and unit tests for  `HtmlUtility` which provides Html correctness checks.
  - An __IntegartionTest__ project, a WebClient that make calls to the different REST endpoints and check the whole flow.
  
 ## Testing the project 
