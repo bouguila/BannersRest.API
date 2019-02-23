@@ -47,7 +47,7 @@ It contains a collection of Http requests to interact with the REsT API
 
 - PUT resources:
 
- - ``PUT`` **api/banner/{banner_id}** :Updates a specific banner 
+  - ``PUT`` **api/banner/{banner_id}** :Updates a specific banner 
 
      - **Request Body**
 
@@ -63,4 +63,4 @@ It contains a collection of Http requests to interact with the REsT API
 
 - DELETE resources:
 
-- ``DELETE`` **api/banner/{banner_id}** :deletes a specific banner
+  - ``DELETE`` **api/banner/{banner_id}** :deletes a specific banner
