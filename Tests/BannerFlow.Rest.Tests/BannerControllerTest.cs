@@ -179,10 +179,10 @@ namespace BannerFlow.Rest.Tests
             var notExistingId = 5;
 
             // Act
-            var badResponse = _controller.DeleteById(notExistingId);
+            var notFound = _controller.DeleteById(notExistingId);
 
             // Assert
-            Assert.IsType<NotFoundResult>(badResponse);
+            Assert.IsType<NotFoundResult>(notFound);
         }
 
         [Fact]

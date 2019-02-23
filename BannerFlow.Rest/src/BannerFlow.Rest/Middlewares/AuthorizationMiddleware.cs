@@ -1,4 +1,5 @@
 ﻿using System.Threading.Tasks;
+using BannerFlow.Rest.src.BannerFlow.Rest.Entities.Exceptions;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
@@ -8,13 +9,13 @@ using MongoDB.Bson;
 
 namespace BannerFlow.Rest.Entities.Extensions
 {
-    public class ApiKeyValidatorMiddleware
+    public class AuthorizationMiddleware
     {
        
         private readonly RequestDelegate _next;
         private readonly string _apiKey;
 
-        public ApiKeyValidatorMiddleware(RequestDelegate next, IConfiguration config)
+        public AuthorizationMiddleware(RequestDelegate next, IConfiguration config)
         {
             _next = next;
             _apiKey = config.GetSection("AppSettings")["ApiKey"]; ;
@@ -24,18 +25,12 @@ namespace BannerFlow.Rest.Entities.Extensions
         {
             if (!context.Request.Headers.Keys.Contains("x-api-key"))
             {
-                context.Response.StatusCode = 400; //Bad Request                
-                await context.Response.WriteAsync("API Key is missing");
-                return;
+                throw new UnauthorizedException("missing API Key");
             }
-            else
+
+            if (!IsValidApiKey(context.Request.Headers["x-api-key"]))
             {
-                if (!IsValidApiKey(context.Request.Headers["x-api-key"]))
-                {
-                    context.Response.StatusCode = 401; //UnAuthorized              
-                    await context.Response.WriteAsync("Invalid API Key");
-                    return;
-                }
+                throw new UnauthorizedException("Invalid API Key");
             }
 
             await _next.Invoke(context);
@@ -48,11 +43,11 @@ namespace BannerFlow.Rest.Entities.Extensions
     }
 
     #region ExtensionMethod
-    public static class ApiKeyValidatorsExtension
+    public static class AuthorizationExtension
     {
-        public static IApplicationBuilder ApplyApiKeyValidation(this IApplicationBuilder app)
+        public static IApplicationBuilder ApplyAuthorization(this IApplicationBuilder app)
         {
-            app.UseMiddleware<ApiKeyValidatorMiddleware>();
+            app.UseMiddleware<AuthorizationMiddleware>();
             return app;
         }
     }
