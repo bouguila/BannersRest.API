@@ -21,7 +21,7 @@ the solution contains two test project:
 
 #### Authorization
 
-- Only requests with the headers containing **`x-api-key`**:`abcde1234` are accepted. 
+- Only requests with the headers containing **`x-api-key`**:`abcde1234` are allowed. 
   > (wanted to keep it simple as we have no concept of users and claims for the moment)
 
 ### Endpoints
