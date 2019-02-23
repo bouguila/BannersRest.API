@@ -28,14 +28,14 @@ the solution contains two test project:
 
 - GET resources:
 
-   - ``GET`` **api/banner**    :   &nbsp;&nbsp; get all banners
-   - ``GET`` **api/banner/{banner_id}** :  &nbsp;&nbsp;get specific banner 
-   - ``GET`` **api/banner/{banner_id}/html** :   &nbsp;&nbsp;returns the html content of a specific banner 
+   - ``GET`` **api/banner**    :   &nbsp;&nbsp; Get all banners
+   - ``GET`` **api/banner/{banner_id}** :  &nbsp;&nbsp;Get specific banner 
+   - ``GET`` **api/banner/{banner_id}/html** :   &nbsp;&nbsp;Return the html content of a specific banner 
 
 
 - POST resources:
 
-   - ``POST`` **api/banner**    :   &nbsp;&nbsp;get all banners.
+   - ``POST`` **api/banner**    :   &nbsp;&nbsp;Create new Banner.
 
      - **Request Body**
 
@@ -51,7 +51,7 @@ the solution contains two test project:
 
 - PUT resources:
 
-  - ``PUT`` **api/banner/{banner_id}** :   &nbsp;&nbsp;Updates a specific banner 
+  - ``PUT`` **api/banner/{banner_id}** :   &nbsp;&nbsp;Update a specific banner 
 
      - **Request Body**
 
@@ -67,4 +67,4 @@ the solution contains two test project:
 
 - DELETE resources:
 
-  - ``DELETE`` **api/banner/{banner_id}** :&nbsp;&nbsp;deletes a specific banner
+  - ``DELETE`` **api/banner/{banner_id}** :&nbsp;&nbsp;Delete a specific banner
