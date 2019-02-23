@@ -39,10 +39,10 @@ It contains a collection of Http requests to interact with the REsT API
 <pre>
 {
     <b> Id </b>: int, required
-    <b> Html **: string, should contain valid html code
+    <b> Html </b>: string, should contain valid html code
     <b> Created </b>: DatetTime, optional, default is the timestamp of the object creation
     <b> Modified </b>: Datetime, optional, default is null
-  }
+}
 </pre>
 
 - PUT resources:
