@@ -46,6 +46,7 @@ the solution contains two test project:
     }
     </pre>
 
+
 - PUT resources:
 
   - ``PUT`` **api/banner/{banner_id}** :   &nbsp;&nbsp;Updates a specific banner 
