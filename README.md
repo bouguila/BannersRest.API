@@ -38,10 +38,10 @@ It contains a collection of Http requests to interact with the REsT API
 ```
 
   {
-    **Id**: int, required
-    **Html**: string, should contain valid html code
-    **Created**: DatetTime, optional, default is the timestamp of the object creation
-    **Modified**: Datetime, optional, default is null
+    ** Id **: int, required
+    ** Html **: string, should contain valid html code
+    ** Created **: DatetTime, optional, default is the timestamp of the object creation
+    ** Modified **: Datetime, optional, default is null
   }
 
 ```
