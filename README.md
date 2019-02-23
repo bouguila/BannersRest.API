@@ -25,25 +25,25 @@ It contains a collection of Http requests to interact with the REsT API
 
 - GET resources:
 
-- ``GET`` **api/banner**    : get all banners
-- ``GET`` **api/banner/{banner_id}** :get specific banner 
-- ``GET`` **api/banner/{banner_id}/html** : returns the html content of a specific banner 
+   - ``GET`` **api/banner**    : get all banners
+   - ``GET`` **api/banner/{banner_id}** :get specific banner 
+   - ``GET`` **api/banner/{banner_id}/html** : returns the html content of a specific banner 
 
 
 - POST resources:
 
-- ``POST`` **api/banner**    : get all banners.
+   - ``POST`` **api/banner**    : get all banners.
 
-    ** Request Body:
+    ** Request Body: **
 
-<pre>
-{
-    <b> Id </b>: int, required
-    <b> Html </b>: string, should contain valid html code
-    <b> Created </b>: DatetTime, optional, default is the timestamp of the object creation
-    <b> Modified </b>: Datetime, optional, default is null
-}
-</pre>
+    <pre>
+    {
+        <b> Id </b>: int, required
+        <b> Html </b>: string, should contain valid html code
+        <b> Created </b>: DatetTime, optional, default is the timestamp of the object creation
+        <b> Modified </b>: Datetime, optional, default is null
+    }
+    </pre>
 
 - PUT resources:
 
