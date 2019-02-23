@@ -10,6 +10,8 @@ the solution contains two test project:
  - An __IntegartionTest__ project, a WebClient that make calls to the different REST endpoints and check the whole flow.
  
 ## Testing the project 
+
+- Make sure MongoDb is installed on your computer
 - Run the **BannerFlow.Rest** project using VisualStudio
 - Import ``Banner.Rest.API.postman_Req_collection.json`` file in [Postman](https://www.getpostman.com/).
  > It contains a collection of Http requests to interact with the REsT API 
