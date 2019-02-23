@@ -7,16 +7,11 @@ using BannerFlow.Rest.Entities.Extensions;
 using BannerFlow.Rest.Services;
 using BannerFlow.Rest.src.BannerFlow.Rest.Middlewares;
 using Microsoft.AspNetCore.Builder;
-using Microsoft.AspNetCore.Diagnostics;
 using Microsoft.AspNetCore.Hosting;
-using Microsoft.AspNetCore.Http;
-using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
-using Microsoft.Extensions.Logging;
-using Microsoft.Extensions.Options;
+using Microsoft.Net.Http.Headers;
 
 namespace BannerFlow.Rest
 {
@@ -32,6 +27,12 @@ namespace BannerFlow.Rest
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            services.AddCors(options =>
+            {
+                options.AddPolicy("AllowAllOrigin", 
+                    builder => builder.AllowAnyOrigin());
+            });
+
             services.AddScoped<IBannerService, BannerService>()
                     .AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
         }
@@ -50,7 +51,8 @@ namespace BannerFlow.Rest
             }
             #endregion
 
-            app.ApplyExceptionHandling()
+            app.UseCors("AllowAllOrigin")
+               .ApplyExceptionHandling()
                .ApplyAuthorization()
                .UseHttpsRedirection()
                .UseMvc();
