@@ -15,7 +15,10 @@ the solution contains two test project:
 - Run the **BannerFlow.Rest** project using VisualStudio
 - Import ``Banner.Rest.API.postman_Req_collection.json`` file in [Postman](https://www.getpostman.com/).
     > It contains a collection of Http requests to interact with the REST API 
-
+   ### Alternatively
+- I created **BannersRest.Client** (AngularJs WebApp) to interact with Rest API. It provides very simple UI's to create, list, update and delete Banners.
+- You can clone the app from here https://github.com/bouguila/BannersRest.Client and run it to try different CRUD operations
+  > The [Readme](https://github.com/bouguila/BannersRest.Client#to-run-the-app) of the app provides more information on how to run it
 
 ## API Specification:
 
