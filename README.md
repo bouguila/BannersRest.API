@@ -22,7 +22,7 @@ the solution contains two test project:
 #### Authorization
 
 - Only requests with the headers containing **`x-api-key`**:`abcde1234` are allowed. 
-  > (wanted to keep it simple as we have no concept of users and claims for the moment)
+  > (wanted to keep it simple as we have no concept of users and claims for the moment, and of course the key in clear can't be added to README file on real project :) )
 
 ### Endpoints
 
@@ -39,7 +39,7 @@ the solution contains two test project:
 
      - **Request Headers**
         - **`x-api-key`**:`abcde1234`
-        - content-type : application/json
+        - **content-type** : application/json
      
      - **Request Body**
 
