@@ -26,6 +26,7 @@ the solution contains two test project:
 
 - Only requests with the headers containing **`x-api-key`**:`abcde1234` are allowed. 
   > (wanted to keep it simple as we have no concept of users and claims for the moment, and of course the key in clear can't be added to README file on real project :) )
+- to remove this request restriction, please comment the `ApplyAuthorization();` in ``Startup.cs`` file
 
 ### Endpoints
 
