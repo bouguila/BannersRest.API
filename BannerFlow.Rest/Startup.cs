@@ -31,7 +31,8 @@ namespace BannerFlow.Rest
             {
                 options.AddPolicy("AllowAllOrigin", 
                     builder => builder.AllowAnyOrigin()
-                                      .AllowAnyHeader());
+                                      .AllowAnyHeader()
+                                      .AllowAnyMethod());
             });
 
             services.AddScoped<IBannerService, BannerService>()
