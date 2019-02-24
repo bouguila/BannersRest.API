@@ -20,11 +20,6 @@ namespace BannerFlow.Rest.Entities.Extensions
         {
             Banner banner = (Banner)validationContext.ObjectInstance;
 
-            if (banner.Id <= 0)
-            {
-                return new ValidationResult("invalid Id");
-            }
-
             if (!HtmlUtility.IsValid(banner.Html))
             {
                 return new ValidationResult("invalid HTML content");
