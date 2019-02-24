@@ -22,7 +22,7 @@ namespace BannerFlow.Rest.Entities.Extensions
 
             if (!HtmlUtility.IsValid(banner.Html))
             {
-                return new ValidationResult("invalid HTML content");
+                return new ValidationResult("invalid HTML content", new List<string>(){"Html"});
             }
 
             return ValidationResult.Success;
