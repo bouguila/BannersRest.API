@@ -14,7 +14,7 @@ the solution contains two test project:
 - Make sure MongoDb is installed on your computer
 - Run the **BannerFlow.Rest** project using VisualStudio
 - Import ``Banner.Rest.API.postman_Req_collection.json`` file in [Postman](https://www.getpostman.com/).
-    > It contains a collection of Http requests to interact with the REsT API 
+    > It contains a collection of Http requests to interact with the REST API 
 
 
 ## API Specification:
@@ -22,7 +22,7 @@ the solution contains two test project:
 #### Authorization
 
 - Only requests with the headers containing **`x-api-key`**:`abcde1234` are allowed. 
-  > (wanted to keep it simple as we have no concept of users and claims for the moment)
+  > (wanted to keep it simple as we have no concept of users and claims for the moment, and of course the key in clear can't be added to README file on real project :) )
 
 ### Endpoints
 
@@ -37,6 +37,10 @@ the solution contains two test project:
 
    - ``POST`` **api/banner**    :   &nbsp;&nbsp;Create new Banner.
 
+     - **Request Headers**
+        - **`x-api-key`**:`abcde1234`
+        - **content-type** : application/json
+     
      - **Request Body**
 
     <pre>
@@ -53,11 +57,15 @@ the solution contains two test project:
 
   - ``PUT`` **api/banner/{banner_id}** :   &nbsp;&nbsp;Update a specific banner 
 
+     - **Request Headers**
+        - **`x-api-key`**:`abcde1234`
+        - content-type : application/json
+        
      - **Request Body**
 
     <pre>
     {
-        <b> Id </b>: &nbsp;&nbsp;int, required
+        <b> Id </b>: &nbsp;&nbsp;int, required, should be the same as request path
         <b> Html </b>: &nbsp;&nbsp;string, should contain valid html code
         <b> Created </b>: &nbsp;&nbsp;DatetTime, optional, default is the timestamp of the object creation
         <b> Modified </b>: &nbsp;&nbsp;Datetime, optional, default is null
