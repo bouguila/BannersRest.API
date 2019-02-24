@@ -37,6 +37,10 @@ the solution contains two test project:
 
    - ``POST`` **api/banner**    :   &nbsp;&nbsp;Create new Banner.
 
+     - **Request Headers**
+        - **`x-api-key`**:`abcde1234`
+        - content-type : application/json
+     
      - **Request Body**
 
     <pre>
@@ -53,6 +57,10 @@ the solution contains two test project:
 
   - ``PUT`` **api/banner/{banner_id}** :   &nbsp;&nbsp;Update a specific banner 
 
+     - **Request Headers**
+        - **`x-api-key`**:`abcde1234`
+        - content-type : application/json
+        
      - **Request Body**
 
     <pre>
