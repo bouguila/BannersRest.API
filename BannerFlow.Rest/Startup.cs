@@ -30,7 +30,8 @@ namespace BannerFlow.Rest
             services.AddCors(options =>
             {
                 options.AddPolicy("AllowAllOrigin", 
-                    builder => builder.AllowAnyOrigin());
+                    builder => builder.AllowAnyOrigin()
+                                      .AllowAnyHeader());
             });
 
             services.AddScoped<IBannerService, BannerService>()
