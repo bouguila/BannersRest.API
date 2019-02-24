@@ -57,7 +57,7 @@ the solution contains two test project:
 
     <pre>
     {
-        <b> Id </b>: &nbsp;&nbsp;int, required
+        <b> Id </b>: &nbsp;&nbsp;int, required, should be the same as request path
         <b> Html </b>: &nbsp;&nbsp;string, should contain valid html code
         <b> Created </b>: &nbsp;&nbsp;DatetTime, optional, default is the timestamp of the object creation
         <b> Modified </b>: &nbsp;&nbsp;Datetime, optional, default is null
