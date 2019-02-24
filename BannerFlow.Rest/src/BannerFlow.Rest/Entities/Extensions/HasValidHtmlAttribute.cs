@@ -9,15 +9,10 @@ using System.Threading.Tasks;
 
 namespace BannerFlow.Rest.Entities.Extensions
 {
-    public class HasValidHtmlAttribute : ValidationAttribute, IClientModelValidator
+    public class HasValidHtmlAttribute : ValidationAttribute
     {
         public HasValidHtmlAttribute()
         {
-        }
-
-        public void AddValidation(ClientModelValidationContext context)
-        {
-            throw new NotImplementedException();
         }
 
         protected override ValidationResult IsValid(

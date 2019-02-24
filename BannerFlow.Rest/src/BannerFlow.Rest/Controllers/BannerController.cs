@@ -47,9 +47,9 @@ namespace BannerFlow.Rest.Controllers
         [HttpPost]
         public ActionResult<Banner> Create(Banner banner)
         {
-            var b = _bannerService.GetBannerById(banner.Id);
+            var existinBanner = _bannerService.GetBannerById(banner.Id);
 
-            if (b != null)
+            if (existinBanner != null)
             {
                 return BadRequest("A Banner with same Id exists already");
             }
